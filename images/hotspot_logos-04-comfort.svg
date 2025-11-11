@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="volume-2" data-name="volume" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880.63 870.42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #7a1318;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="215.93" y="210.82" width="448.78" height="448.78" rx="76.22" ry="76.22"/>
+  <g id="heart">
+    <path class="cls-1" d="M440.32,563.73l-111.9-111.9,111.9-111.9c84.69-84.69,196.6,27.21,111.91,111.9l-111.9,111.9Z"/>
+    <path class="cls-1" d="M328.41,451.83c-84.69-84.69,27.21-196.6,111.9-111.91"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="button_icon" data-name="button icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880.63 870.42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #7a1318;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="215.93" y="210.82" width="448.78" height="448.78" rx="76.22" ry="76.22"/>
+  <path id="play" class="cls-1" d="M461.36,419.93l-165.68-95.65c-11.76-6.79-26.47,1.7-26.47,15.28v191.31c0,13.58,14.71,22.08,26.47,15.28l165.68-95.65c11.76-6.79,11.76-23.77,0-30.57Z"/>
+  <g id="pause">
+    <rect id="line" class="cls-1" x="510.66" y="324.97" width="39.08" height="223.57" rx="19" ry="19"/>
+    <rect id="line-2" data-name="line" class="cls-1" x="581.97" y="324.97" width="39.08" height="223.57" rx="19" ry="19"/>
+  </g>
+</svg>
