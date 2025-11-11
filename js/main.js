@@ -93,6 +93,39 @@ loadInfo();
     hotspot.addEventListener("mouseleave", hideInfo);
   });
 
+
+
+// GREENSOCK ANIMATION
+
+// If there are any initailly visible hotspots on my AR model, I can make it pulse to show interactivity.
+if (document.querySelectorAll(".Hotspot")) {
+  gsap.from(".Hotspot", {
+    duration: 1, scale: 2
+  });
+};
+
+
+// Animation for a quick pulsing animation when hover mouse over the hotspot svgs, this promotes interactivity.
+const hotspotHover = document.querySelectorAll('.Hotspot');
+
+hotspotHover.forEach(hotspot => {
+  
+  // Using forEach, I'm making a new timeline for each hotspot (pre-hover) that is paused
+  const tl = gsap.timeline({paused: true});
+  
+  tl.to(hotspot, {
+    scale: 1.15, duration: 0.5 
+    // onComplete to trigger subsequent bounce animation ASK ??
+  });
+  
+  tl.to(hotspot.querySelectorAll('img'), {
+    scale: 1.5, duration: 1.5, ease: "bounce.out"
+  });
+
+  hotspot.addEventListener('mouseenter', () => tl.play());
+  hotspot.addEventListener('mouseleave', () => tl.reverse());
+});
+
 })();
 
 // In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.

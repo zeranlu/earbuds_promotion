@@ -12,7 +12,7 @@ model-viewer {
   cursor: pointer;
   width: 45px;
   height: 39px;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .Hotspot:not([data-visible]) {
@@ -30,7 +30,7 @@ opacity: 0;
 }
 
 .hotspot-icon {
-    max-width: 50%;
+    max-width: 75%;
 }
 
 .HotspotAnnotation{
