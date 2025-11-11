@@ -56,7 +56,9 @@ function loadInfo() {
     // lets create an image
     const imageElement = document.createElement('img');
     // lets populate the image
+    imageElement.classList.add("hotspot-icon");
     imageElement.src = infoBox.image;
+    imageElement.alt = " ";
 
     selected.appendChild(imageElement);
     selected.appendChild(titleElement);
