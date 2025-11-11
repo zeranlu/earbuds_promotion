@@ -3,31 +3,33 @@
 
   const infoBoxes = [
     {
-      title: "Noise-cancelling microphones",
-      text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
-      image: "images/nameofimage1.jpg",
-      imagealt: "alternate text"
+      title: "Customizable Button",
+      text: "You can assign custom button functions to earch individual earbud!",
+      image: "images/hotspot_logos-01.png",
     },
 
     {
-      title: "Comfortable fit",
-      text: "Three pairs of ultra comfortable silicone tips are included. The tips create an acoustic seal that blocks outside audio and secures the earbuds in place.",
-      image: "images/nameofimage2.jpg",
-      imagealt: "alternate text"
-    },
-
-    {
-      title: "360 AUDIO",
-      text: "360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience.",
-      image: "images/nameofimage3.jpg",
-      imagealt: "alternate text"
-    },
-
-    {
-      title: "Ultra Fast Charging",
+      title: "Lightning Fast Charging",
       text: "Charge your earbuds in 30 minutes or less with our hyper charging technology.",
-      image: "images/nameofimage4.jpg",
-      imagealt: "alternate text"
+      image: "images/hotspot_logos-02.png",
+    },
+
+    {
+      title: "Volume Wheel",
+      text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
+      image: "images/hotspot_logos-03.png",
+    },
+
+    {
+      title: "Stability Tip",
+      text: "Three pairs of ultra comfortable silicone tips are included. The tips create an acoustic seal that blocks outside audio and secures the earbuds in place.",
+      image: "images/hotspot_logos-04.png",
+    },
+
+    {
+      title: "High Quality Sound",
+      text: "360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience.",
+      image: "images/hotspot_logos-05.png",
     }
   ];
 
@@ -55,7 +57,6 @@ function loadInfo() {
     const imageElement = document.createElement('img');
     // lets populate the image
     imageElement.src = infoBox.image;
-    imageElement.alt = infoBox.imagealt;
 
     selected.appendChild(imageElement);
     selected.appendChild(titleElement);
