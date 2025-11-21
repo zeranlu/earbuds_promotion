@@ -1,5 +1,7 @@
 (() => {
 
+
+
 // Scrolling Sequence JS
 
 const canvas = document.querySelector("#explode-view");
@@ -47,6 +49,7 @@ function render() {
   context.clearRect(0,0, canvas.width, canvas.height);
   context.drawImage(images[buds.frame], 0, 0);
 };
+
 
 
 // AR Hotspot JS
@@ -119,11 +122,6 @@ function loadInfo() {
 
 loadInfo();
 
-
-
-
-
-
    function showInfo() {
     //console.log(this.slot);
     //console.log(`#${this.slot}`);
@@ -145,6 +143,21 @@ loadInfo();
   });
 
 
+
+// X-RAY SLIDER JS
+
+const divisor = document.querySelector("#divisor");
+const slider = document.querySelector("#slider");
+
+function moveDivisor() {
+  divisor.style.width = `${slider.value}%`;
+};
+
+function resetSlider() {
+  slider.value = 50;
+};
+
+slider.addEventListener("input", moveDivisor);
 
 // GREENSOCK ANIMATION
 
