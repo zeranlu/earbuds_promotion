@@ -5,12 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
   </head>
   <body>
 
-<div class="content">
-                <h1>Cras tincidunt lobortis</h1>
-                <p>
+
+
+<header>
+
+</header>
+
+
+
+<main>
+
+
+
+<div class="grid-con">
+                <h1 class="l-col-span-full">Cras tincidunt lobortis</h1>
+                <p class="l-col-span-full">
                 Gravida quis blandit turpis cursus in. Tellus in metus vulputate eu
                 scelerisque felis. Sed vulputate mi sit amet mauris. Iaculis urna id
                 volutpat lacus laoreet. Duis tristique sollicitudin nibh sit. Dui
@@ -25,7 +38,7 @@
                 pharetra vel. Non enim praesent elementum facilisis leo. Pharetra diam
                 sit amet nisl suscipit. Egestas erat imperdiet sed euismod.
                 </p>
-                <p>
+                <p class="l-col-span-full">
                 Tortor aliquam nulla facilisi cras fermentum odio eu feugiat.
                 Suspendisse ultrices gravida dictum fusce ut placerat. Semper risus in
                 hendrerit gravida rutrum quisque non tellus orci. Sed adipiscing diam
@@ -37,7 +50,7 @@
                 ipsum dolor sit amet consectetur adipiscing elit pellentesque. Auctor eu
                 augue ut lectus arcu bibendum at varius.
                 </p>
-                <p>
+                <p class="l-col-span-full">
                 Commodo viverra maecenas accumsan lacus. Diam vel quam elementum
                 pulvinar etiam non. Turpis egestas integer eget aliquet nibh. Cras
                 tincidunt lobortis feugiat vivamus at augue. Ornare aenean euismod
@@ -51,48 +64,64 @@
                 Tellus pellentesque eu tincidunt tortor aliquam. Volutpat maecenas
                 volutpat blandit aliquam etiam erat velit scelerisque.
                 </p>
-                </div>
+</div>
         
 
 <!-- Scroller Sequence Section -->
-<div>
-    <canvas id="explode-view"></canvas>
+<div class="grid-con" id="scroller-section">
+    <canvas class="l-col-span-full" id="scroller-animation"></canvas>
 </div>
 
 
 <!-- AR Model Section -->
-<model-viewer src="model/earbuds_ARV2.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/AR-images/poster.webp" shadow-intensity="1" exposure="1">
+<div class="grid-con" id="ar-section">
+    <div class="l-col-span-full" id="model-viewer-con">
+        <model-viewer src="model/earbuds_ARV2.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/AR-images/poster.webp" shadow-intensity="1" exposure="1">
 
-    <button class="Hotspot" slot="hotspot-1" data-position="0.9658947351457554m 3.856121421685882m 0.19190975187959225m" data-normal="1m 1.0214024554606884e-9m -5.3341456414864786e-9m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation" id="hotspot-1"></div>
-    </button>
-    
-    <button class="Hotspot" slot="hotspot-2" data-position="-1.521393417484051m 0.661857559973031m -0.04934160951046551m" data-normal="-0.9523763480444059m 0.09755010855384585m 0.2889001003923915m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation" id="hotspot-2"></div>
-    </button>
-    
-    <button class="Hotspot" slot="hotspot-3" data-position="0.21791110373276157m 2.8777205721675614m -0.05971131326557677m" data-normal="0.9999999999999996m -3.4228542950295595e-8m 0m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation" id="hotspot-3"></div>
-    </button>
-    
-    <button class="Hotspot" slot="hotspot-4" data-position="-0.9260696918634626m 9.203952320147717m -0.603032266141826m" data-normal="-0.9036471761300767m -0.34089182257114964m -0.25925768335048066m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation" id="hotspot-4"></div>
-    </button>
-    
-    <button class="Hotspot" slot="hotspot-5" data-position="-3.805531443764257m 5.678098077835177m -0.11284622740353087m" data-normal="-0.4426024151474248m 1.5149636065184697e-8m 0.8967179612931071m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation" id="hotspot-5"></div>
-    </button>
+            <button class="Hotspot" slot="hotspot-1" data-position="0.9658947351457554m 3.856121421685882m 0.19190975187959225m" data-normal="1m 1.0214024554606884e-9m -5.3341456414864786e-9m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-1"></div>
+            </button>
+            
+            <button class="Hotspot" slot="hotspot-2" data-position="-1.521393417484051m 0.661857559973031m -0.04934160951046551m" data-normal="-0.9523763480444059m 0.09755010855384585m 0.2889001003923915m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-2"></div>
+            </button>
+            
+            <button class="Hotspot" slot="hotspot-3" data-position="0.21791110373276157m 2.8777205721675614m -0.05971131326557677m" data-normal="0.9999999999999996m -3.4228542950295595e-8m 0m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-3"></div>
+            </button>
+            
+            <button class="Hotspot" slot="hotspot-4" data-position="-0.9260696918634626m 9.203952320147717m -0.603032266141826m" data-normal="-0.9036471761300767m -0.34089182257114964m -0.25925768335048066m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-4"></div>
+            </button>
+            
+            <button class="Hotspot" slot="hotspot-5" data-position="-3.805531443764257m 5.678098077835177m -0.11284622740353087m" data-normal="-0.4426024151474248m 1.5149636065184697e-8m 0.8967179612931071m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-5"></div>
+            </button>
 
-</model-viewer>
+        </model-viewer>
+    </div>
+</div>
+
 
 
 <!-- X-Ray Slider Section -->
-<div class="col-span-full">        
-                <div id="xray">
-                    <div id="divisor"></div>
-                    <input type="range" min="0" max="100" value="50" id="slider">
-                </div>    
+<div class="grid-con" id="xray-section">        
+    <div class="l-col-span-full" id="xray-con">
+        <div id="divisor"></div>
+            <input type="range" min="0" max="100" value="50" id="slider">
+        </div>    
 </div>
+
+
+
+</main>
+
+
+
+<footer class="grid-con" id="footer">
+
+</footer>
+
 
     <!-- link to greensock main library -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -103,5 +132,8 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <!-- Our JS folder last -->
     <script src="js/main.js"></script>
-  </body>
+
+
+
+</body>
 </html>
