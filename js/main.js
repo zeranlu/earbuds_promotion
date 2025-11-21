@@ -4,7 +4,7 @@
 
 // Scrolling Sequence JS
 
-const canvas = document.querySelector("#explode-view");
+const canvas = document.querySelector("#scroller-animation");
 const context = canvas.getContext("2d");
 
 canvas.width = 1920;
@@ -32,7 +32,7 @@ gsap.to(buds, {
   frame: frameCount,
   snap: "frame",
   scrollTrigger: {
-    trigger: "#explode-view",
+    trigger: "#scroller-animation",
     pin: true,
     scrub: 2,
     start: "top top",
