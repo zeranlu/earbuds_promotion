@@ -1,35 +1,83 @@
 (() => {
-  const hotspots = document.querySelectorAll(".Hotspot");
 
+// Scrolling Sequence JS
+
+const canvas = document.querySelector("#explode-view");
+const context = canvas.getContext("2d");
+
+canvas.width = 100;
+canvas.height = 800;
+
+const frameCount = 782;
+const images = [];
+
+const buds = {
+  frame: 0
+};
+
+for (let i=0; i<frameCount; i++) {
+  const img = new Image();
+  img.src = `images/scroller-images/earbud_video_sequence_${(i).toString().padStart(5, '0')}.webp`;
+
+  // console.log(`images/scroller-images/earbud_video_sequence_${(i).toString().padStart(5, '0')}.webp`);
+
+  images.push(img);
+};
+
+gsap.to(buds, {
+  frame: frameCount,
+  snap: "frame",
+  scrollTrigger: {
+    trigger: "#explode-view",
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    markers: true
+  },
+  onUpate: render
+});
+
+images[0].addEventListener("load", render);
+
+function render() {
+  console.log(buds.frame);
+  context.clearRect(0,0, canvas.width, canvas.height);
+  context.drawImage(images[buds.frame], 0,0);
+};
+
+
+// AR Hotspot JS
+
+  const hotspots = document.querySelectorAll(".Hotspot");
   const infoBoxes = [
     {
       title: "Customizable Button",
       text: "You can assign custom button functions to earch individual earbud!",
-      image: "images/hotspot_logos-01.png",
+      image: "images/AR-images/hotspot_logos-01.png",
     },
 
     {
       title: "Lightning Fast Charging",
       text: "Charge your earbuds in 30 minutes or less with our hyper charging technology.",
-      image: "images/hotspot_logos-02.png",
+      image: "images/AR-images/hotspot_logos-02.png",
     },
 
     {
       title: "Volume Wheel",
       text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
-      image: "images/hotspot_logos-03.png",
+      image: "images/AR-images/hotspot_logos-03.png",
     },
 
     {
       title: "Stability Tip",
       text: "Three pairs of ultra comfortable silicone tips are included. The tips create an acoustic seal that blocks outside audio and secures the earbuds in place.",
-      image: "images/hotspot_logos-04.png",
+      image: "images/AR-images/hotspot_logos-04.png",
     },
 
     {
       title: "High Quality Sound",
       text: "360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience.",
-      image: "images/hotspot_logos-05.png",
+      image: "images/AR-images/hotspot_logos-05.png",
     }
   ];
 
