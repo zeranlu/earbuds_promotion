@@ -9,8 +9,14 @@
   <body>
 
 
-    <!-- UPDATE WITH YOUR OWN MODEL -->
-<model-viewer src="model/earbuds_ARV2.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1" exposure="1">
+<!-- Scroller Sequence -->
+<div>
+    <canvas id="explode-view"></canvas>
+</div>
+
+
+<!-- UPDATE WITH YOUR OWN MODEL -->
+<model-viewer src="model/earbuds_ARV2.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/AR-images/poster.webp" shadow-intensity="1" exposure="1">
 
     <button class="Hotspot" slot="hotspot-1" data-position="0.9658947351457554m 3.856121421685882m 0.19190975187959225m" data-normal="1m 1.0214024554606884e-9m -5.3341456414864786e-9m" data-visibility-attribute="visible">
         <div class="HotspotAnnotation" id="hotspot-1"></div>
@@ -39,6 +45,9 @@
 
     <!-- link to greensock main library -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- link to greensock scrollTrigger -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <!-- Our JS folder last -->
