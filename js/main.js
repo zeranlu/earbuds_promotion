@@ -2,7 +2,29 @@
 
 
 
-// Scrolling Sequence JS
+// HAMBURGER MENU ---------------------------------
+
+const menu = document.querySelector("#menu");
+const hamburger = document.querySelector("#hamburger");
+const closeButton = document.querySelector("#close");
+const menuLinks = document.querySelectorAll("#menu nav ul li a");
+
+function toggleMenu() {
+  menu.classList.toggle("open");
+};
+
+closeButton.addEventListener("click", toggleMenu);
+hamburger.addEventListener("click", toggleMenu);
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", toggleMenu);
+  // console.log("link clicked");
+});
+
+
+
+
+// Scrolling Sequence JS ---------------------------------
 
 const canvas = document.querySelector("#scroller-animation");
 const context = canvas.getContext("2d");
@@ -45,14 +67,14 @@ gsap.to(buds, {
 images[0].addEventListener("load", render);
 
 function render() {
-  console.log(buds.frame);
+  // console.log(buds.frame);
   context.clearRect(0,0, canvas.width, canvas.height);
   context.drawImage(images[buds.frame], 0, 0);
 };
 
 
 
-// AR Hotspot JS
+// AR Hotspot JS ---------------------------------
 
   const hotspots = document.querySelectorAll(".Hotspot");
   const infoBoxes = [
@@ -95,7 +117,7 @@ function loadInfo() {
     
     // selected will be the infoBox ono ur page, IE hotspot-1, etc
     let selected = document.querySelector(`#hotspot-${index+1}`);
-    console.log(selected);
+    // console.log(selected);
 
     //lets create an h2
     const titleElement = document.createElement('h2');
@@ -144,7 +166,7 @@ loadInfo();
 
 
 
-// X-RAY SLIDER JS
+// X-RAY SLIDER JS ---------------------------------
 
 const divisor = document.querySelector("#divisor");
 const slider = document.querySelector("#slider");
@@ -159,7 +181,7 @@ function resetSlider() {
 
 slider.addEventListener("input", moveDivisor);
 
-// GREENSOCK ANIMATION
+// GREENSOCK ANIMATION ---------------------------------
 
 // If there are any initailly visible hotspots on my AR model, I can make it pulse to show interactivity.
 if (document.querySelectorAll(".Hotspot")) {
