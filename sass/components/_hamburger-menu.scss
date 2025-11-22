@@ -1,0 +1,83 @@
+#hamburger, #close {
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(118, 118, 118);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.open {
+    display: flex;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.overlay ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.overlay li {
+    margin: 20px 0;
+}
+
+.overlay a {
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.overlay a:hover {
+    color: orange;
+}
+
+@media screen and (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+
+    #close {
+        display: none;
+    }
+
+    .overlay nav {
+        background-color: brown;
+        box-shadow: 3px 3px 5px rgb(0, 138, 21);
+    }
+
+    .overlay nav ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .overlay nav li {
+        height: 50px;
+    }
+    
+    .overlay nav a {
+        height: 100%;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        color: black;
+    }
+}
