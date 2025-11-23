@@ -1,3 +1,9 @@
+@use '../abstracts';
+
 header {
-    height: 30%;
+    padding-top: clamp(10vh, 15vh, 20vh);
+}
+
+body {
+    background-color: abstracts.$accent-color;
 }
