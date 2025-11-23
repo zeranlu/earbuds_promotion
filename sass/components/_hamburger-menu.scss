@@ -1,6 +1,14 @@
+@use '../abstracts';
+
 ul, li {
     margin: 0;
     padding: 0;
+}
+
+#hamburger {
+    position: fixed;
+    top: 5%;
+    right: 5%;
 }
 
 #hamburger, #close {
@@ -9,22 +17,39 @@ ul, li {
     cursor: pointer;
 }
 
+#hamburger:hover, #close:hover {
+    background-color: abstracts.$primary-color;
+    transition: 1s ease;
+}
+
+#hamburger:active, #close:active {
+    background-color: abstracts.$secondary-color;
+    transition: 0.3s ease;
+}
+
 .overlay {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     right: 0;
     width: 50%;
     height: 100%;
-    background-color: black;
-    color: white;
-    justify-content: right;
+    color: abstracts.$accent-color;
+    justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .overlay.open {
-    display: flex;
-    background-color: blue;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    background-color: rgba(255, 255, 255, 0.099);
+    backdrop-filter: blur(30px);
+    box-shadow: 5px 5px 7px rgba(219, 219, 219, 0.086);
 }
 
 #close {
@@ -34,26 +59,41 @@ ul, li {
 }
 
 .overlay nav {
-    background-color: red;
+    background-color: none;
 }
 
 .overlay ul {
     list-style-type: none;
-    text-align: center;
+    text-align: left;
 }
 
 .overlay li {
-    margin: 20px 0;
+    margin-top: clamp(20px, 30px, 40px);
+    margin-bottom: clamp(20px, 30px, 40px);
 }
 
 .overlay a {
-    color: white;
-    font-size: 32px;
+    font-family: 'ethnocentric';
+    color: abstracts.$secondary-color;
+    font-size: clamp(16px, 18px, 20px);
     text-decoration: none;
 }
 
 .overlay a:hover {
-    color: orange;
+    color: abstracts.$primary-color;
+    transition: 0.5s ease;
+}
+
+.overlay a:active {
+    color: abstracts.$secondary-color;
+    transition: 0.3s ease;
+}
+
+.overlay a img {
+    width: 100%;
+    display: block;
+    max-width: 200px;
+    z-index: inherit;
 }
 
 @media screen and (min-width: 768px) {
@@ -64,23 +104,31 @@ ul, li {
 
     .overlay {
         display: flex;
-        height: 10%;
+        height: auto;
         width: 100%;
-        background-color: red;
+        background-color: none;
         z-index: 999;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
     }
 
     .overlay nav {
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
         width: 100%;
     }
 
     .overlay nav ul {
-        background-color: yellow;
+        background-color: abstracts.$secondary-color;
         width: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .overlay li {
+        margin-top: clamp(10px, 20px, 30px);
+        margin-bottom: clamp(10px, 20px, 30px);
     }
 
     .overlay nav a { 
@@ -89,7 +137,7 @@ ul, li {
         text-decoration: none;
         display: flex;
         align-items: center;
-        color: black;
+        color: abstracts.$accent-color;
     }
 
     .overlay nav li:first-child {
