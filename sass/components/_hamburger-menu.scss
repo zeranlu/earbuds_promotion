@@ -55,3 +55,47 @@ ul, li {
 .overlay a:hover {
     color: orange;
 }
+
+@media screen and (min-width: 768px) {
+    
+    #hamburger, #close {
+        display: none;
+    }
+
+    .overlay {
+        display: flex;
+        height: 10%;
+        width: 100%;
+        background-color: red;
+        z-index: 999;
+    }
+
+    .overlay nav {
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+
+    .overlay nav ul {
+        background-color: yellow;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .overlay nav a { 
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+    }
+
+    .overlay nav li:first-child {
+        margin-right: auto;
+    }
+
+
+}
+
