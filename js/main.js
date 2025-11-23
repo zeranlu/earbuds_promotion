@@ -3,7 +3,6 @@
 
 
 // HAMBURGER MENU ---------------------------------
-
 const menu = document.querySelector("#menu");
 const hamburger = document.querySelector("#hamburger");
 const closeButton = document.querySelector("#close");
@@ -11,6 +10,7 @@ const menuLinks = document.querySelectorAll("#menu nav ul li a");
 
 function toggleMenu() {
   menu.classList.toggle("open");
+  console.log("class toggled")
 };
 
 closeButton.addEventListener("click", toggleMenu);
@@ -18,7 +18,7 @@ hamburger.addEventListener("click", toggleMenu);
 
 menuLinks.forEach((link) => {
   link.addEventListener("click", toggleMenu);
-  // console.log("link clicked");
+  console.log("link clicked");
 });
 
 
