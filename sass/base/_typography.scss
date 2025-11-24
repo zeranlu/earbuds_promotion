@@ -1,0 +1,20 @@
+h2 {
+    margin: auto;
+    text-align: center;
+    font-family: 'ethnocentric';
+}
+
+p {
+    margin: auto;
+    text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+    p {
+    text-align: center;
+}
+}
+
+@media screen and (min-width: 1200px) {
+
+}
