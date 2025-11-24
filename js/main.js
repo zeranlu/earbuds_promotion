@@ -138,7 +138,7 @@ gsap.to(buds, {
     scrub: 2,
     start: "top top",
     end: "top+=4000 bottom",
-    markers: true
+    markers: false
   },
   onUpdate: render
 });

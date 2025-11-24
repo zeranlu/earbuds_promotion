@@ -7,14 +7,15 @@ ul, li {
 
 #hamburger {
     position: fixed;
-    top: 5%;
-    right: 5%;
+    top: 3%;
+    right: 3%;
 }
 
 #hamburger, #close {
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 1000;
 }
 
 #hamburger:hover, #close:hover {
@@ -41,6 +42,7 @@ ul, li {
     transform: translateX(100%);
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
 }
 
 .overlay.open {
@@ -50,6 +52,7 @@ ul, li {
     background-color: rgba(255, 255, 255, 0.099);
     backdrop-filter: blur(30px);
     box-shadow: 5px 5px 7px rgba(219, 219, 219, 0.086);
+    z-index: 1000;
 }
 
 #close {
@@ -93,7 +96,7 @@ ul, li {
     width: 100%;
     display: block;
     max-width: 200px;
-    z-index: inherit;
+    z-index: 1000;
 }
 
 @media screen and (min-width: 768px) {
@@ -107,7 +110,6 @@ ul, li {
         height: auto;
         width: 100%;
         background-color: none;
-        z-index: 999;
         opacity: 1;
         transform: none;
         pointer-events: auto;

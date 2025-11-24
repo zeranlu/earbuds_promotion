@@ -1,10 +1,37 @@
 @use '../abstracts';
 
 header {
-    padding-top: clamp(10vh, 15vh, 20vh);
+    background-color: abstracts.$secondary-color;
+}
+
+.mobile-header h1 {
+    font-family: 'ethnocentric';
+    color: abstracts.$accent-color;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
 }
 
 body {
     background-color: abstracts.$accent-color;
     font-family: 'move-x';
+    font-size: 16px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .mobile-header {
+        display: none;
+    }
+
+    body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    body {
+        font-size: 20px;
+    }
 }
