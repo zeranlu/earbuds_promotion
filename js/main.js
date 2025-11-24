@@ -2,6 +2,31 @@
 
 
 
+    gsap.registerPlugin(ScrollToPlugin);
+
+    const navLinks = document.querySelectorAll("#menu nav ul li a");
+    
+    navLinks.forEach((navLink) => {
+        navLink.addEventListener("click", scrollLink);
+    })
+
+    function scrollLink(event) {
+        // console.log("scrollLink function called");
+        event.preventDefault();
+        // console.log(event.currentTarget.hash);
+        let selected = event.currentTarget.hash;
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: `${selected}`,
+                offsetY: 100,
+                ease: "power2.out"
+            }
+        });
+    }  
+
+
+
 // HAMBURGER MENU ---------------------------------
 const menu = document.querySelector("#menu");
 const hamburger = document.querySelector("#hamburger");
@@ -75,28 +100,6 @@ prevButton.addEventListener("click", () => {
   }
   animateSlide(newIndex, -1);
 });
-
-
-
-// function showImage() {
-//   heroImage.src = galleryImages[imageIndex];
-// };
-
-// nextButton.addEventListener("click", () => {
-//   imageIndex++;
-//   if (imageIndex >= galleryImages.length) {
-//     imageIndex = 0;
-//   }
-//   showImage();
-// });
-
-// prevButton.addEventListener("click", () => {
-//   imageIndex--;
-//   if (imageIndex < 0) {
-//     imageIndex = galleryImages.length - 1;
-//   }
-//   showImage();
-// });
 
 
 
