@@ -23,6 +23,82 @@ menuLinks.forEach((link) => {
 
 
 
+// Hero Image Gallery JS -------------------------
+const galleryImages = [
+  "images/hero-images/earbud-promo-photo-1.png",
+  "images/hero-images/earbud-promo-photo-2.png",
+  "images/hero-images/earbud-promo-photo-3.png",
+  "images/hero-images/earbud-promo-photo-4.png",
+  "images/hero-images/earbud-promo-photo-5.png"
+];
+
+let imageIndex = 0;
+const heroImage = document.querySelector(".hero-image");
+const prevButton = document.querySelector(".prev-btn");
+const nextButton = document.querySelector(".next-btn");
+
+heroImage.src = galleryImages[imageIndex];
+
+function animateSlide(newIndex, direction) {
+  const offset = direction * 100;
+
+  gsap.to(heroImage, {
+    xPercent: -offset,
+    opacity: 0,
+    duration: 0.5,
+    onComplete: () => {
+      imageIndex = newIndex;
+      heroImage.src = galleryImages[imageIndex];
+      heroImage.style.transform = `translateX(${offset}%)`;
+
+      gsap.to(heroImage, {
+        xPercent: 0,
+        opacity: 1,
+        duration: 0.5
+      });
+    }
+  });
+};
+
+nextButton.addEventListener("click", () => {
+  let newIndex = imageIndex + 1;
+  if (newIndex >= galleryImages.length) {
+    newIndex = 0;
+  }
+  animateSlide(newIndex, 1);
+});
+
+prevButton.addEventListener("click", () => {
+  let newIndex = imageIndex - 1;
+  if (newIndex < 0) {
+    newIndex = galleryImages.length - 1;
+  }
+  animateSlide(newIndex, -1);
+});
+
+
+
+// function showImage() {
+//   heroImage.src = galleryImages[imageIndex];
+// };
+
+// nextButton.addEventListener("click", () => {
+//   imageIndex++;
+//   if (imageIndex >= galleryImages.length) {
+//     imageIndex = 0;
+//   }
+//   showImage();
+// });
+
+// prevButton.addEventListener("click", () => {
+//   imageIndex--;
+//   if (imageIndex < 0) {
+//     imageIndex = galleryImages.length - 1;
+//   }
+//   showImage();
+// });
+
+
 
 // Scrolling Sequence JS ---------------------------------
 
