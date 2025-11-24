@@ -1,0 +1,32 @@
+@use '../abstracts';
+
+.hero-con {
+    position: relative;
+    z-index: 1;
+}
+
+.next-btn, .prev-btn {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    background-color: abstracts.$secondary-color;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.next-btn:hover, .prev-btn:hover {
+    background-color: abstracts.$primary-color;
+    transition: 1s ease;
+}
+
+.next-btn:active, .prev-btn:active {
+    background-color: abstracts.$secondary-color;
+    transition: 0.3s ease;
+}
