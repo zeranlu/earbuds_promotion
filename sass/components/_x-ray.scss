@@ -1,4 +1,4 @@
-@use "../abstracts/" as a;
+@use "../abstracts";
 
 #xray-con {
     position: relative;
@@ -6,6 +6,16 @@
     background-image: url(../../images/slider-images/earbudsV2_slider.png);
     background-size: cover;
     border-radius: 15px;
+}
+
+#xray-section {
+    background-color: abstracts.$primary-color;
+    color: white;
+}
+
+#xray-section h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #divisor {
@@ -73,4 +83,11 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  #xray-section h2 {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
 }
