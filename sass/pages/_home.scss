@@ -12,41 +12,12 @@ header {
     padding: 20px;
 }
 
-body {
-    background-color: abstracts.$secondary-color;
-    font-family: 'move-x';
-    font-size: 16px;
-}
-
 #about {
     background-color: abstracts.$accent-color;
+    padding-bottom: 50px;
 }
 
 #about h2 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-#scroller-section {
-    margin-top: 50px;
-}
-
-#ar-section {
-    background-color: abstracts.$secondary-color;
-    color: white;
-}
-
-#ar-section h2 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-#xray-section {
-    background-color: abstracts.$primary-color;
-    color: white;
-}
-
-#xray-section h2 {
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -60,21 +31,11 @@ footer {
         display: none;
     }
 
-    body {
-        font-size: 18px;
+        #about {
+        padding-bottom: 100px;
     }
 
     #about h2 {
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-
-    #ar-section h2 {
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-
-    #xray-section h2 {
         margin-top: 100px;
         margin-bottom: 100px;
     }
@@ -82,7 +43,5 @@ footer {
 
 @media screen and (min-width: 1200px) {
 
-    body {
-        font-size: 20px;
-    }
+    
 }
