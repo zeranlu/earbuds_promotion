@@ -13,16 +13,47 @@ header {
 }
 
 body {
-    background-color: abstracts.$accent-color;
+    background-color: abstracts.$secondary-color;
     font-family: 'move-x';
     font-size: 16px;
 }
 
-#about, #ar-section, #xray-section, #scroller-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+#about {
+    background-color: abstracts.$accent-color;
 }
 
+#about h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#scroller-section {
+    margin-top: 50px;
+}
+
+#ar-section {
+    background-color: abstracts.$secondary-color;
+    color: white;
+}
+
+#ar-section h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#xray-section {
+    background-color: abstracts.$primary-color;
+    color: white;
+}
+
+#xray-section h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: abstracts.$secondary-color;
+}
 
 @media screen and (min-width: 768px) {
     .mobile-header {
@@ -33,9 +64,19 @@ body {
         font-size: 18px;
     }
 
-    #about, #ar-section, #xray-section, #scroller-section {
-        margin-top: 30px;
-        margin-bottom: 30px;
+    #about h2 {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    #ar-section h2 {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    #xray-section h2 {
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 }
 
@@ -43,10 +84,5 @@ body {
 
     body {
         font-size: 20px;
-    }
-
-    #about, #ar-section, #xray-section, #scroller-section {
-        margin-top: 40px;
-        margin-bottom: 40px;
     }
 }

@@ -1,3 +1,10 @@
+@use '../abstracts';
+
+#model-viewer-con {
+  border: #333;
+}
+
+
 model-viewer {
   width: auto;
   max-width: 1200px;
