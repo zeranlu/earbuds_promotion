@@ -18,9 +18,10 @@ header {
 }
 
 #about {
-    background-color: abstracts.$primary-color;
+    background-color: abstracts.$secondary-color;
     padding-bottom: 50px;
     color: abstracts.$accent-color;
+    border: 15px;
 }
 
 #about h2 {
@@ -30,6 +31,8 @@ header {
 
 footer {
     background-color: abstracts.$secondary-color;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width: 768px) {
