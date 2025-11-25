@@ -54,25 +54,21 @@
 
 
 <div class="grid-con" id="about">
-                <h2 class="col-span-full m-col-span-full l-col-span-full">About Us</h2>
-                <br>
-                <br>
-                <p class="col-span-full m-col-span-full l-col-span-full">
-                Velocity Earbuds is a cutting-edge audio brand built for the active lifestyle
-                </p>
-                <br>
-                <br>
-                <p class="col-span-full m-col-span-full l-col-span-full">
-                We combine advanced next-generation audio technology with sleek, sport-inspired design to deliver earbuds that are as tough and dynamic as the athletes and fitness enthusiasts who wear them
-                </p>
-                <br>
-                <br>
-                <p class="col-span-full m-col-span-full l-col-span-full">
-                WWith ergonomic fits and sweat-resistant durability, Velocity Earbuds ensure comfort and reliability no matter how intense your routine 
-                <br>
-                <br>
-                Join us in pushing the limits of sound and performance, and experience audio innovation designed to keep up with your velocity
-                </p>
+        <h2 class="col-span-full m-col-span-full l-col-span-full">About Us</h2>
+                <div class="text-content col-span-full m-col-span-full l-col-span-full">
+                    <p>
+                    Velocity Earbuds is a cutting-edge audio brand built for the active lifestyle
+                    </p>
+                    <p>
+                    We combine advanced next-generation audio technology with sleek, sport-inspired design to deliver earbuds that are as tough and dynamic as the athletes and fitness enthusiasts who wear them
+                    </p>
+                    <p>
+                    With ergonomic fits and sweat-resistant durability, Velocity Earbuds ensure comfort and reliability no matter how intense your routine</p>
+                    <p> 
+                    Join us in pushing the limits of sound and performance, and experience audio innovation designed to keep up with your velocity
+                    </p>
+                </div>
+                
 </div>
 
 
@@ -88,7 +84,15 @@
 <!-- AR Model Section -->
 <div class="grid-con" id="ar-section">
     <h2 class="col-span-full m-col-span-full l-col-span-full">AR Model</h2>
-    <div class="col-span-full m-col-start-2 m-col-span-10 l-col-start-2 l-col-span-10" id="model-viewer-con">
+    
+    <div class="text-content col-span-full m-col-start-1 m-col-span-3 l-col-start-1 l-col-span-3">
+                <p>Interactive AR Model of Velocity Earbuds</p>
+                <p>Discover all of the amazing perks!</p>
+    </div>
+
+    <div class="col-span-full m-col-start-4 l-col-start-4" id="model-viewer-con">
+
+
         <model-viewer src="model/earbuds_ARV2.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/AR-images/poster.webp" shadow-intensity="1" exposure="1">
 
             <button class="Hotspot" slot="hotspot-1" data-position="0.9658947351457554m 3.856121421685882m 0.19190975187959225m" data-normal="1m 1.0214024554606884e-9m -5.3341456414864786e-9m" data-visibility-attribute="visible">
@@ -112,6 +116,43 @@
             </button>
 
         </model-viewer>
+        <div class="mobile-hotspot-con col-span-full m-col-span-full">
+            <div class="mobile-hotspot" id="mobile-hotspot-1">
+                <img class="col-span-1" src="images/AR-images/hotspot_logos-01.png" alt="">
+                <div class="ar-text-content">
+                    <h3>Customizable Button</h3>
+                    <span>You can assign custom button functions to earch individual earbud!</span>
+                </div>
+            </div>
+            <div class="mobile-hotspot" id="mobile-hotspot-2">
+                <img src="images/AR-images/hotspot_logos-02.png" alt="">
+                <div class="ar-text-content">
+                    <h3>Lightning Fast Charging</h3>
+                    <span>Charge your earbuds in 30 minutes or less with our hyper charging technology</span>
+                </div>
+            </div>
+            <div class="mobile-hotspot" id="mobile-hotspot-3">
+                <img src="images/AR-images/hotspot_logos-03.png" alt="">
+                <div class="ar-text-content">
+                    <h3>Volume Wheel</h3>
+                    <span>Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience</span>
+                </div>
+            </div>
+            <div class="mobile-hotspot" id="mobile-hotspot-4">
+                <img src="images/AR-images/hotspot_logos-04.png" alt="">
+                <div class="ar-text-content">
+                    <h3>Stability Tip</h3>
+                    <span>Three pairs of ultra comfortable silicone tips are included The tips create an acoustic seal that blocks outside audio and secures the earbuds in place</span>
+                </div>
+            </div>
+            <div class="mobile-hotspot" id="mobile-hotspot-5">
+                <img src="images/AR-images/hotspot_logos-05.png" alt="">
+                <div class="ar-text-content">
+                    <h3>High Quality Sound</h3>
+                    <span>360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -124,12 +165,8 @@
         <div id="divisor"></div>
             <input type="range" min="0" max="100" value="50" id="slider">
     </div>
-    <div class="col-span-full m-col-start-7 l-col-start-7">
-        <br>
-        <br>
+    <div class="text-content col-span-full m-col-start-7 l-col-start-7">
         <p>Discover the inner workings of the new Velocity Earbuds!</p>
-        <br>
-        <br>
         <p>Drag the slider to see the high tech sound support and waterproof design</p>
     </div>
 </div>

@@ -12,9 +12,15 @@ header {
     padding: 20px;
 }
 
+.text-content p {
+    margin: 25px 5px;
+    text-align: left;
+}
+
 #about {
-    background-color: abstracts.$accent-color;
+    background-color: abstracts.$primary-color;
     padding-bottom: 50px;
+    color: abstracts.$accent-color;
 }
 
 #about h2 {
@@ -29,6 +35,11 @@ footer {
 @media screen and (min-width: 768px) {
     .mobile-header {
         display: none;
+    }
+
+    .text-content p {
+        margin: 50px 0;
+        text-align: center;
     }
 
         #about {
