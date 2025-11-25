@@ -138,7 +138,7 @@ gsap.to(buds, {
     scrub: 2,
     start: "top top",
     end: "top+=4000 bottom",
-    markers: false
+    markers: false,
   },
   onUpdate: render
 });
@@ -148,7 +148,7 @@ images[0].addEventListener("load", render);
 function render() {
   // console.log(buds.frame);
   context.clearRect(0,0, canvas.width, canvas.height);
-  context.drawImage(images[buds.frame], 0, 0);
+  context.drawImage(images[buds.frame], 0,0);
 };
 
 
